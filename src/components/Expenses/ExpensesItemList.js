@@ -1,11 +1,12 @@
-import ExpenseItem from './ExpenseItem';
-import './ExpensesItemList.css';
+import ExpenseItem from '../Expenses/ExpenseItem';
+import Card from '../UI/Card';
+import "../Expenses/ExpensesItemList.css";
 
 function ExpensesItemList(props){
 
 
     return (
-      <div className="expenses"> 
+      <Card className="expenses">
         <h2>Expense Tracker</h2>
         <ExpenseItem
           title={props.ExpenseItem[0].title}
@@ -24,7 +25,13 @@ function ExpensesItemList(props){
           amount={props.ExpenseItem[2].amount}
           date={props.ExpenseItem[2].date}
         />
-      </div>
+
+        <ExpenseItem
+          title={props.ExpenseItem[3].title}
+          amount={props.ExpenseItem[3].amount}
+          date={props.ExpenseItem[3].date}
+        />
+      </Card>
     );
 }
 
